@@ -31,18 +31,18 @@ const AppNavigation = () => {
                     }}
                 />
                 <Stack.Screen
-                  name="BottomTabNavigation"
-                  component={BottomTabNavigation}
-                  options={{
-                    headerShown: false,
-                  }}
+                    name="BottomTabNavigation"
+                    component={BottomTabNavigation}
+                    options={{
+                        headerShown: false,
+                    }}
                 />
                 <Stack.Screen
-                  name="Chat"
-                  component={Chat}
-                  options={{
-                    headerShown: false
-                  }}
+                    name="Chat"
+                    component={Chat}
+                    options={{
+                        headerShown: false,
+                    }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
