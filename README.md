@@ -1,10 +1,10 @@
-### Chat GPT Clone
+# Chat GPT Clone
 
 Chat GPT Clone mobile app built using React Native Expo and Firebase. The app provides features like user login, registration, chat completion, and generating images. 
 
 ![Chat GPT Mobile](https://i.ibb.co/RcNyyT6/chatgpt.png)
 
-### Features
+## Features
 The Chat GPT Clone app offers the following features:
 
 1. **User Authentication:**
@@ -19,7 +19,7 @@ The Chat GPT Clone app offers the following features:
 - Users can generate images based on specific prompts or descriptions.
 - The app uses AI models and image generation algorithms to create images.
 
-### Prerequisites
+## Prerequisites
 Before setting up the app, make sure you have the following prerequisites installed:
 
 - **Node.js**: Install Node.js from the official website (https://nodejs.org) or use a package manager like Homebrew (macOS) or Chocolatey (Windows).
@@ -31,13 +31,14 @@ npm install --global expo-cli
 ```
 - **Firebase Account**: Create a Firebase account at https://firebase.google.com and set up a new project.
 
-### Getting Started
+## Getting Started
 To get started with the Chat GPT Clone app, follow these steps:
 
 1. **Clone the repository:**
 
 ```shell
 git clone https://github.com/bizzara/ChatGPT.git
+
 cd ChatGPT
 ```
 
@@ -67,7 +68,7 @@ expo start
 7. **Scan the QR code** displayed in the terminal or in the browser using the Expo Go app to launch the app on your device.
 8. You should now be able to use the Chat GPT Clone app on your device.
 
-### Technologies Used
+## Technologies Used
 The Chat GPT Clone app utilizes the following technologies:
 
 - **React Native**: A framework for building native apps using React.
@@ -75,5 +76,5 @@ The Chat GPT Clone app utilizes the following technologies:
 - **Firebase**: A backend-as-a-service platform for building web and mobile apps.
 - **GPT-3.5**: A state-of-the-art language model developed by OpenAI.
 
-### Contributing
+## Contributing
 Contributions to the Chat GPT Clone app are welcome! If you find any issues or want to add new features, please open an issue or submit a pull request
