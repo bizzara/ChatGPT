@@ -10,6 +10,7 @@ import { reducer } from '../utils/reducers/formReducers'
 import { validateInput } from '../utils/actions/formActions'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { getFirebaseApp } from '../utils/firebaseHelper'
+import { useTheme } from '../themes/ThemeProvider'
 
 const initialState = {
     inputValues: {
@@ -27,6 +28,7 @@ const Login = ({ navigation }) => {
     const [formState, dispatchFormState] = useReducer(reducer, initialState)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
+    const { colors } = useTheme()
 
     const inputChangedHandler = useCallback(
         (inputId, inputValue) => {
@@ -76,7 +78,7 @@ const Login = ({ navigation }) => {
     }, [error])
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
             <PageContainer>
                 <View
                     style={{
@@ -98,7 +100,7 @@ const Login = ({ navigation }) => {
                     <Text
                         style={{
                             ...FONTS.h4,
-                            color: COLORS.black,
+                            color: colors.text,
                             marginVertical: 8,
                         }}
                     >
@@ -110,7 +112,7 @@ const Login = ({ navigation }) => {
                         errorText={formState.inputValidities['email']}
                         id="email"
                         placeholder="Enter your email"
-                        placeholderTextColor={COLORS.black}
+                        placeholderTextColor={colors.text}
                     />
 
                     <Input
@@ -118,7 +120,7 @@ const Login = ({ navigation }) => {
                         errorText={formState.inputValidities['password']}
                         id="password"
                         placeholder="Enter your password"
-                        placeholderTextColor={COLORS.black}
+                        placeholderTextColor={colors.text}
                         secureTextEntry
                     />
 

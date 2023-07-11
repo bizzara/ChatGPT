@@ -5,10 +5,12 @@ import { COLORS, FONTS, SIZES, images } from '../constants'
 import { StatusBar } from 'expo-status-bar'
 import PageContainer from '../components/PageContainer'
 import Button from '../components/Button'
+import { useTheme } from "../themes/ThemeProvider"
 
 const Welcome = ({ navigation }) => {
+    const { colors } = useTheme()
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
             <StatusBar style="light" />
             <PageContainer>
                 <View
@@ -30,7 +32,7 @@ const Welcome = ({ navigation }) => {
                     <Text
                         style={{
                             ...FONTS.h4,
-                            color: COLORS.black,
+                            color: colors.text,
                             marginVertical: 8,
                         }}
                     >
@@ -40,7 +42,7 @@ const Welcome = ({ navigation }) => {
                     <Text
                         style={{
                             ...FONTS.body3,
-                            color: COLORS.black,
+                            color: colors.text,
                             marginBottom: 36,
                         }}
                     >

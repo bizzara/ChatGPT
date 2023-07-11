@@ -1,15 +1,18 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import React from 'react'
 import { COLORS, SIZES } from '../constants'
+import { useTheme } from '../themes/ThemeProvider'
 
 const Input = (props) => {
+    const { colors, dark } = useTheme();
+
     const onChangeText = (text) => {
         props.onInputChanged(props.id, text)
     }
     return (
         <View style={styles.container}>
             <View
-                style={[styles.inputContainer, { borderColor: COLORS.black }]}
+                style={[styles.inputContainer, { borderColor: colors.text}]}
             >
                 <TextInput
                     {...props}

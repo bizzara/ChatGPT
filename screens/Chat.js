@@ -5,6 +5,7 @@ import { COLORS, SIZES, images } from '../constants'
 import { StatusBar } from 'expo-status-bar'
 import { MaterialIcons, FontAwesome, Ionicons } from '@expo/vector-icons'
 import { Bubble, GiftedChat } from 'react-native-gifted-chat'
+import { useTheme } from '../themes/ThemeProvider'
 
 // Thanks for watching...
 const Chat = ({ navigation }) => {
@@ -15,6 +16,7 @@ const Chat = ({ navigation }) => {
     const [isTyping, setIsTyping] = useState(false)
 
     const [messages, setMessages] = useState([])
+    const {colors } = useTheme()
 
     const renderMessage = (props) => {
         const { currentMessage } = props
@@ -203,14 +205,14 @@ const Chat = ({ navigation }) => {
         <SafeAreaView
             style={{
                 flex: 1,
-                backgroundColor: COLORS.white,
+                backgroundColor: colors.background,
             }}
         >
             <StatusBar style="auto" />
             <View
                 style={{
                     height: 60,
-                    backgroundColor: COLORS.secondaryWhite,
+                    backgroundColor: colors.background,
                     position: 'absolute',
                     top: 0,
                     right: 0,
@@ -234,14 +236,14 @@ const Chat = ({ navigation }) => {
                     <MaterialIcons
                         name="keyboard-arrow-left"
                         size={24}
-                        color={COLORS.black}
+                        color={colors.text}
                     />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => console.log('Save chat')}>
                     <Ionicons
                         name="bookmark-outline"
                         size={24}
-                        color={COLORS.black}
+                        color={colors.text}
                     />
                 </TouchableOpacity>
             </View>
@@ -260,7 +262,7 @@ const Chat = ({ navigation }) => {
             <View
                 style={{
                     flexDirection: 'row',
-                    backgroundColor: COLORS.white,
+                    backgroundColor: colors.background,
                     paddingVertical: 8,
                 }}
             >
@@ -269,19 +271,21 @@ const Chat = ({ navigation }) => {
                         flex: 1,
                         flexDirection: 'row',
                         marginLeft: 10,
-                        backgroundColor: '#F2F2F2',
+                        backgroundColor: colors.background,
                         paddingVertical: 8,
                         marginHorizontal: 12,
                         borderRadius: 12,
+                        borderColor: colors.text,
+                        borderWidth: .2
                     }}
                 >
                     <TextInput
                         value={inputMessage}
                         onChangeText={handleInputText}
                         placeholder="Enter your question"
-                        placeholderTextColor={COLORS.black}
+                        placeholderTextColor={colors.text}
                         style={{
-                            color: COLORS.black,
+                            color: colors.text,
                             flex: 1,
                             paddingHorizontal: 10,
                         }}

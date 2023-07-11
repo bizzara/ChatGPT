@@ -4,25 +4,27 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Ionicons } from '@expo/vector-icons'
 import { COLORS } from '../constants'
 import { Home, Profile, Saved } from '../screens'
+import { useTheme } from '../themes/ThemeProvider'
 
 const Tab = createBottomTabNavigator()
 
-const screenOptions = {
-    tabBarShowLabel: false,
-    headerShown: false,
-    tabBarStyle: {
-        position: 'absolute',
-        bottom: 0,
-        right: 0,
-        left: 0,
-        elevation: 0,
-        height: 60,
-        backgroundColor: COLORS.white,
-    },
-}
+
 const BottomTabNavigation = () => {
+    const { colors } = useTheme()
     return (
-        <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Navigator screenOptions={{
+            tabBarShowLabel: false,
+            headerShown: false,
+            tabBarStyle: {
+                position: 'absolute',
+                bottom: 0,
+                right: 0,
+                left: 0,
+                elevation: 0,
+                height: 60,
+                backgroundColor: colors.background
+            }
+        }}>
             <Tab.Screen
                 name="Home"
                 component={Home}

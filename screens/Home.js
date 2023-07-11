@@ -3,23 +3,33 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS, FONTS, SIZES } from '../constants'
 import { Ionicons, AntDesign } from '@expo/vector-icons'
+import { useTheme } from '../themes/ThemeProvider'
 
 const Home = ({ navigation }) => {
+
+    const { dark, colors, setScheme } = useTheme();
+
+    const ToggleTheme = ()=>{
+        dark ? setScheme('light') : setScheme('dark')
+    }
+
     return (
         <SafeAreaView
             style={[
                 styles.areaStyle,
                 {
-                    backgroundColor: COLORS.white,
+                    backgroundColor: colors.background,
                 },
             ]}
         >
             <View style={styles.center}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                 onPress={ToggleTheme}
+                >
                     <Ionicons
-                        name={'sunny-outline'}
+                        name={ dark ? 'sunny-outline': "partly-sunny-sharp"}
                         size={32}
-                        color={COLORS.black}
+                        color={dark ? COLORS.white: COLORS.black}
                     />
                 </TouchableOpacity>
 
@@ -27,7 +37,7 @@ const Home = ({ navigation }) => {
                     style={[
                         styles.subTitle,
                         {
-                            color: COLORS.black,
+                            color: colors.text,
                         },
                     ]}
                 >
@@ -38,13 +48,13 @@ const Home = ({ navigation }) => {
                     style={[
                         styles.box,
                         {
-                            backgroundColor: COLORS.white,
-                            borderColor: COLORS.gray,
+                            backgroundColor: colors.background,
+                            borderColor: colors.text,
                             borderWidth: 1,
                         },
                     ]}
                 >
-                    <Text style={[styles.boxText, { color: COLORS.black }]}>
+                    <Text style={[styles.boxText, { color: colors.text }]}>
                         "Explain quantum computings in simple terms"
                     </Text>
                 </View>
@@ -52,13 +62,13 @@ const Home = ({ navigation }) => {
                     style={[
                         styles.box,
                         {
-                            backgroundColor: COLORS.white,
-                            borderColor: COLORS.gray,
+                            backgroundColor: colors.background,
+                            borderColor: colors.text,
                             borderWidth: 1,
                         },
                     ]}
                 >
-                    <Text style={[styles.boxText, { color: COLORS.black }]}>
+                    <Text style={[styles.boxText, { color: colors.text }]}>
                         "How To make an HTTP request in JavaScript ?"
                     </Text>
                 </View>
@@ -66,13 +76,13 @@ const Home = ({ navigation }) => {
                     style={[
                         styles.box,
                         {
-                            backgroundColor: COLORS.white,
-                            borderColor: COLORS.gray,
+                            backgroundColor: colors.background,
+                            borderColor: colors.text,
                             borderWidth: 1,
                         },
                     ]}
                 >
-                    <Text style={[styles.boxText, { color: COLORS.black }]}>
+                    <Text style={[styles.boxText, { color: colors.text }]}>
                         "Got any creative ideas for a 10 year old's birthday"
                     </Text>
                 </View>
