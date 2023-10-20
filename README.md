@@ -44,7 +44,7 @@ To get started with the Chat GPT Clone app, follow these steps:
 1. **Clone the repository:**
 
 ```shell
-git clone https://github.com/bizzara/ChatGPT.git
+git clone https://github.com/quintonmills/MedGPT.git
 
 cd ChatGPT
 ```
@@ -86,4 +86,4 @@ The Chat GPT Clone app utilizes the following technologies:
 
 ## Contributing
 
-Contributions to the Chat GPT Clone app are welcome! If you find any issues or want to add new features, please open an issue or submit a pull request
+Contributions to Med-GPT are welcome! If you find any issues or want to add new features, please open an issue or submit a pull request
