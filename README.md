@@ -1,6 +1,6 @@
-# Chat GPT Clone
+# MedGPT
 
-Chat GPT Clone mobile app built using React Native Expo and Firebase. The app provides features like user login, registration, chat completion, and generating images.
+Mobile application built using React Native Expo and Firebase. The app provides features like user login, registration, chat completion, and generating images.
 
 ![Chat GPT Mobile](https://i.ibb.co/RcNyyT6/chatgpt.png)
 
