@@ -1,27 +1,28 @@
 # MedGPT
 
-Mobile application built using React Native Expo and Firebase. The app provides features like user login, registration, chat completion, and generating images.
+This repository contains code for an AI-powered virtual assistant designed to help clinicians make faster and more accurate medical diagnoses. The assistant incorporates natural language processing, knowledge graphs, and deep learning algorithms to analyze patient data and suggest the most likely diagnostic hypotheses to clinicians.
 
 ![Chat GPT Mobile](https://i.ibb.co/RcNyyT6/chatgpt.png)
 
 ## Features
 
-The Chat GPT Clone app offers the following features:
+The Medical Diagnostic Assistant offers the following features:
 
-1. **User Authentication:**
+1. **Conversational interface:**
 
--   Login: Existing users can log in using their credentials.
--   Register: New users can create an account by providing necessary information.
+-   Doctors can describe patient symptoms and data in natural language. 
+-   The system is designed to understand medical terminology, synonyms, acronyms, and conversational context.
 
-2. **Chat Completion:**
+2. **Medical ontology:**
 
--   Users can engage in conversations with the Chat GPT model and receive intelligent responses.
--   The app utilizes the power of GPT-3.5, a large language model, to generate human-like text responses.
+-   Proprietary knowledge graph maps medical concepts, their semantic relationships, and connections to clinical evidence and guidelines.
+- This contextual understanding aids differential diagnosis.
 
-3. **Image Generation**
+3. **Explainable AI**
 
 -   Users can generate images based on specific prompts or descriptions.
 -   The app uses AI models and image generation algorithms to create images.
+
 
 ## Prerequisites
 
@@ -77,7 +78,7 @@ expo start
 
 ## Technologies Used
 
-The Chat GPT Clone app utilizes the following technologies:
+MedGPT utilizes the following technologies:
 
 -   **React Native**: A framework for building native apps using React.
 -   **Expo**: A framework and platform for universal React applications.
